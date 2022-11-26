@@ -74,59 +74,7 @@
         @endforeach
 
 
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">U.S. Polo Assn. White Clarkin Sneakers</h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li> <img alt="" class="mb-2" height="200" src="https://floimages.mncdn.com/mnpadding/600/900/FFFFFF/media/catalog/product/22-03/07/101083146_f2-1646633567.JPG?w=600" width="130"></li>
-                            <li>Textured and patterned outside</li>
-                            <li>Cushioned footbed</li>
-                            <li>3 months warranty</li>
-                            <li><strong>CAD 30</strong></li>
-                        </ul>
-                        <button class="w-100 btn btn-lg btn-outline-primary" type="button">Add to <i class='fas fa-shopping-cart'></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">Mactree White Colourblocked PU Sneakers</h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li> <img alt="" class="mb-2" height="200" src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/18509904/2022/5/31/766bda50-82e7-480b-a52c-9cd648a2d7941653975616884MactreeMenWhiteColourblockedPUSneakers1.jpg" width="130"></li>
-                            <li>A pair of round toe white sneakers ,has regular styling</li>
-                            <li>Cushioned footbed</li>
-                            <li>1 months warranty</li>
-                            <li><strong>CAD 15</strong></li>
-                        </ul>
-                        <button class="w-100 btn btn-lg btn-outline-primary" type="button">Add to <i class='fas fa-shopping-cart'></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">Nike White AIR WINFLO 9 Running Shoes</h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li> <img alt="" class="mb-2" height="200" src="https://cdn.shopify.com/s/files/1/1182/3402/products/ssph.zone-1664263502-DD8686-800_b_grande.jpg?v=1664263787" width="130"></li>
-                            <li>Textile upper</li>
-                            <li>Cushioned footbed</li>
-                            <li>6 months warranty</li>
-                            <li><strong>CAD 100</strong></li>
-                        </ul>
-                        <button class="w-100 btn btn-lg btn-outline-primary" type="button">Add to <i class='fas fa-shopping-cart'></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
 
 
