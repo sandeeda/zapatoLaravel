@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\Models\products;
 use Illuminate\Http\Request;
 use Hash;
 use Session;
@@ -24,9 +25,12 @@ class CustomAuthController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-                ->withSuccess('Signed in');
-        }
+//            return redirect()->intended('dashboard')
+//                ->withSuccess('Signed in');
+            $listOfproducts = products::all();
+            //return redirect("dashboard",['products'=>$listOfproducts])->withSuccess('You have signed-in');
+            //return redirect()->back()->with('products',$listOfproducts);
+            return redirect('dashboard')->with('products',$listOfproducts)->withSuccess('Signed In');        }
 
         return redirect("login")->withSuccess('Login details are not valid');
     }
@@ -46,7 +50,10 @@ class CustomAuthController extends Controller
 
         $data = $request->all();
         $check = $this->create($data);
-        return redirect("dashboard")->withSuccess('You have signed-in');
+        $listOfproducts = products::all();
+        //return redirect("dashboard",['products'=>$listOfproducts])->withSuccess('You have signed-in');
+        //return redirect()->back()->with('products',$listOfproducts);
+        return redirect('dashboard')->back()->with('products',$listOfproducts);
     }
 
     public function create(array $data)

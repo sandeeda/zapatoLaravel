@@ -27,7 +27,7 @@
                 <a class="me-3 py-2 text-dark text-decoration-none" href="#">Pricing</a>
                 <a class="py-2 " style="color:#7fb902" href="#">
                     @auth
-                         Hi {{Auth::user()->name}}
+                        Hi {{Auth::user()->name}}
                     @endauth
                 </a>
             </nav>
@@ -40,6 +40,40 @@
     </header>
 
     <main>
+
+                <?php
+                $products = \Illuminate\Support\Facades\Session::get('products');
+                \Illuminate\Support\Facades\Session::put('products',$products);
+                ?>
+
+
+        @foreach($products as $product)
+            @if(($loop->iteration) %3 == 1)
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                    @endif
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal">{{$product->productname}}</h4>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li> <img alt="" class="mb-2" height="200" src="{{$product->productimg}}" width="130"></li>
+                                    <li>{{$product->productdesc1}}</li>
+                                    <li>{{$product->productdesc2}}</li>
+                                    <li>{{$product->productWarranty}} months warranty</li>
+                                    <li><strong>CAD {{$product->productPrice}}</strong></li>
+                                </ul>
+                                <button class="w-100 btn btn-lg btn-outline-primary" type="button">Add to <i class='fas fa-shopping-cart'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    @if(($loop->iteration) %3 ==0)
+                </div>
+            @endif
+        @endforeach
+
+
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
             <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm">
